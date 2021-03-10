@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+    int target, size, location;
+    int array[] = {1, 3, 6, 9, 15, 18, 19, 26, 47, 50};
+    
+    printf("Target: ");
+    scanf("%i", &target);
+    
+    size = sizeof(array)/sizeof(array[0]);
+    
+    
+    //linear search
+    //if the first number is the target. stop program 
+    int i = 0;
+    location = i + 1;
+    while (i < size) {
+        if (target == array[i]) {
+             location = i + 1;
+            printf("%i has been found in location %i\n", target, location);
+            return 0;
+        }
+        else {
+            i += 1;
+        }       
+    }
+    printf("%i has not been found\n", target);
+}
