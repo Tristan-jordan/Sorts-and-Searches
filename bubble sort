@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(void) {
+    int array[]= {5, 2, 1, 3, 6, 4};
+    int swap_counter, i, temp;
+    int size = sizeof(array) / sizeof(array[0]);
+    
+    i = 0;
+    while (1) {
+        swap_counter = 0;
+        for (int i = 0; i < size - 1; i++) {
+            if (array[i] > array[i + 1]) 
+                {
+                temp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = temp;
+                swap_counter = 1;
+                }
+        }
+        if(swap_counter == 0) {
+            break;
+        }
+        
+    }
+    for (int i = 0; array[i] != '\0'; i++) {
+        printf("%i ", array[i]);
+    }
+    printf("\n");
+}
